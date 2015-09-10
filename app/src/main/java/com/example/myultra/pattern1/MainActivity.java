@@ -34,7 +34,7 @@ public class MainActivity extends ActionBarActivity
     private NavigationDrawerFragment mNavigationDrawerFragment;
 
     /**
-     * Used to store the last screen title. For use in {@link #restoreActionBar()}.
+     * Used to store the last screen title. 
      */
     private CharSequence mTitle;
 
@@ -45,6 +45,7 @@ public class MainActivity extends ActionBarActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+//NAVIGATION DRAWER IS USED  
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
@@ -67,6 +68,8 @@ public class MainActivity extends ActionBarActivity
                 .commit();
     }
 
+
+//NAVIGATION DRAWER DATA
     public void onSectionAttached(int number) {
         switch (number) {
             case 1:
@@ -81,6 +84,8 @@ public class MainActivity extends ActionBarActivity
         }
     }
 
+
+// THIS FUNCTION IS USED TO ENABLE THE NAVIGATION DRAWER WITH RESPECTIVE DATA
     public void restoreActionBar() {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
